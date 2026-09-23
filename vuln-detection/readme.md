@@ -103,13 +103,25 @@ Para esta parte del laboratorio vamos a hacer una auditoria remota usando OpenVA
 2. Obtener la ip y las credenciales ssh de mi maquina objetivo (CyberOps Workstation)
 3. Cargar la configuracion del target en OpenVas
 4. Crear la task para realizar un escaneo estandar Full and Fast
-5. Correr la task. Los resultados obtenidos son los siguientes
+5. Correr la task.
 
-### Solucion de
+![Task en ejecucion](https://github.com/user-attachments/assets/9b288c8d-1cdc-45a9-ade8-0220d8af28dd)
 
-Para esto en la maquina objetivo hice esto
+Los resultados obtenidos son los siguientes
+
+![Resultados](https://github.com/user-attachments/assets/bd327706-b257-46d4-85b9-c3af0d3501a6)
+
+Como se puede observar las vulnerabilidades con mayor indice de severidad estan asociadas a wireshark especificamente se detectaron vulnerabilidades conocidas que son parchadas en versiones mas actuales de wireshark
+
+### Solucion de vulnerabilidades asociadas a Wireshark
+
+Para solucionar estos problemas se debe actualizar wireshark a la ultima version estable disponible
 
 Volvia a correr la task y ahora arroja el siguiente resultado:
+
+![Resultado con la correccion](https://github.com/user-attachments/assets/a6d1ca72-e6fc-44c6-ac6c-2c7a56562c77)
+
+![Reporte de la nueva run](https://github.com/user-attachments/assets/4bd717b4-d392-4aba-a474-9e87f3656825)
 
 ## Repeticion desde distribucion orientada a la seguridad
 
@@ -119,4 +131,6 @@ Para esta parte vamos a repetir las auditorias en una distribucion de Linux orie
 
 Al correr Linys en Kali Linux obtuve los siguientes resultados
 
-### Auditoria con OpenVas
+![Resultados Lynis Kali](https://github.com/user-attachments/assets/0512269c-b844-4ac8-ae91-b940364d8226)
+
+El análisis realizado con Lynis sobre la máquina virtual de Kali Linux arrojó un índice de hardening de 63, valor considerado normal para una instalación estándar de esta distribución.
