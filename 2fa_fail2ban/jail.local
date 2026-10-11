@@ -1,0 +1,19 @@
+[DEFAULT]
+# IPs que nunca se bloquean
+ignoreip = 127.0.0.1/8 ::1
+
+# 3 fallos en 10 minutos -> bloqueo por 1 hora
+maxretry = 3
+findtime = 10m
+bantime  = 1h
+
+# Debian 12 no tiene /var/log/auth.log: se leen los eventos del journal
+backend = systemd
+
+# Bloquear usando nftables (firewall por defecto en Debian 12)
+banaction = nftables-multiport
+banaction_allports = nftables-allports
+
+[sshd]
+enabled = true
+port    = ssh
